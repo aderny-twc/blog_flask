@@ -28,11 +28,13 @@ blog_flask/
 │   ├── app.py
 │   ├── config.py
 │   ├── main.py
+│   ├── models.py
 │   ├── posts
 │   │   ├── blueprint.py
 │   │   └── templates
 │   │       └── posts
-│   │           └── index.html
+│   │           ├── index.html
+│   │           └── post_detail.html
 │   ├── templates
 │   │   ├── base.html
 │   │   └── index.html
