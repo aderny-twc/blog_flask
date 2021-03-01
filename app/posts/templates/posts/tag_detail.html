@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ tag.name }} posts
+{% endblock %}
+
+{% block content_title %}
+  <h1 class="ml-3 mt-3">Posts for "{{ tag.name }}" tag</h1>
+{% endblock %}
+
+{% block content %}
+  {% for post in posts %}
+  <div class="post mt-3">
+    <a href="{{ url_for('posts.post_detail', slug=post.slug) }}"><h2>{{ post.title }}</h2></a>
+  </div>
+  {% endfor %}
+{% endblock %}

@@ -41,7 +41,7 @@ class Tag(db.Model):
 
     def __init__(self, *args, **kwargs):
         super(Tag, self).__init__(*args, **kwargs)
-        slug = slugify(self.name)
+        self.slug = slugify(self.name)
 
     def __repr__(self):
         return '<Tag id: {}, name: {}>'.format(self.id, self.name)
